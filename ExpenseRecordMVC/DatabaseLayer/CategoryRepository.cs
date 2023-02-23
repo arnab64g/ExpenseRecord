@@ -20,5 +20,13 @@ namespace DatabaseLayer
 
             return list;
         }
+
+        public async Task<bool> CreateCategoryAsync(UserChoice userChoice)
+        {
+            await expenseDbContext.UserChoices.AddAsync(userChoice);
+            await expenseDbContext.SaveChangesAsync();
+
+            return true;
+        }
     }
 }

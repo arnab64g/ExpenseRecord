@@ -16,8 +16,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExpenseRecordMVC
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Github/ExpenseRecord/ExpenseRecord/ExpenseRecordMVC/ExpenseRecordMVC/Views/Category/View.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcVmlldy5jc2h0bWw=
+[D:/Github/ExpenseRecord/ExpenseRecord/ExpenseRecordMVC/ExpenseRecordMVC/Views/Category/AddNewCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQWRkTmV3Q2F0ZWdvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Github/ExpenseRecord/ExpenseRecord/ExpenseRecordMVC/ExpenseRecordMVC/Views/Category/CategoryList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQ2F0ZWdvcnlMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Github/ExpenseRecord/ExpenseRecord/ExpenseRecordMVC/ExpenseRecordMVC/Views/Home/Index.cshtml]

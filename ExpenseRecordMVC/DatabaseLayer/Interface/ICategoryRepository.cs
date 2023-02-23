@@ -10,5 +10,6 @@ namespace DatabaseLayer.Interface
     public interface ICategoryRepository
     {
         public Task<List<UserChoice>> GetUserChoiceAsync(string uname);
+        public Task<bool> CreateCategoryAsync(UserChoice userChoice);
     }
 }

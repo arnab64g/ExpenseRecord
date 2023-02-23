@@ -17,5 +17,10 @@ namespace ExpenseService
         {
             return await categoryRepository.GetUserChoiceAsync(uname);
         }
+
+        public async Task<bool> CreateCategoryAsync(UserChoice userChoice)
+        {
+            return await categoryRepository.CreateCategoryAsync(userChoice);
+        }
     }
 }
