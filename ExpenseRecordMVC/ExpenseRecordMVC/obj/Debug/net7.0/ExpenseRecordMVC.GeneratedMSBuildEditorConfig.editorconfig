@@ -9,37 +9,57 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ExpenseRecordMVC
 build_property.RootNamespace = ExpenseRecordMVC
-build_property.ProjectDir = D:\Github\ExpenseRecord\ExpenseRecordMVC\ExpenseRecordMVC\
+build_property.ProjectDir = D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExpenseRecordMVC\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\Github\ExpenseRecord\ExpenseRecordMVC\ExpenseRecordMVC
+build_property.MSBuildProjectDirectory = D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExpenseRecordMVC
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Github/ExpenseRecord/ExpenseRecordMVC/ExpenseRecordMVC/Views/Home/Index.cshtml]
+[D:/Github/ExpenseRecord/ExpenseRecord/ExpenseRecordMVC/ExpenseRecordMVC/Views/Category/View.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcVmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Github/ExpenseRecord/ExpenseRecord/ExpenseRecordMVC/ExpenseRecordMVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Github/ExpenseRecord/ExpenseRecordMVC/ExpenseRecordMVC/Views/Home/Privacy.cshtml]
+[D:/Github/ExpenseRecord/ExpenseRecord/ExpenseRecordMVC/ExpenseRecordMVC/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Github/ExpenseRecord/ExpenseRecordMVC/ExpenseRecordMVC/Views/Shared/Error.cshtml]
+[D:/Github/ExpenseRecord/ExpenseRecord/ExpenseRecordMVC/ExpenseRecordMVC/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Github/ExpenseRecord/ExpenseRecordMVC/ExpenseRecordMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/Github/ExpenseRecord/ExpenseRecord/ExpenseRecordMVC/ExpenseRecordMVC/Views/Shared/loginState.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGxvZ2luU3RhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Github/ExpenseRecord/ExpenseRecord/ExpenseRecordMVC/ExpenseRecordMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Github/ExpenseRecord/ExpenseRecordMVC/ExpenseRecordMVC/Views/_ViewImports.cshtml]
+[D:/Github/ExpenseRecord/ExpenseRecord/ExpenseRecordMVC/ExpenseRecordMVC/Views/User/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Github/ExpenseRecord/ExpenseRecord/ExpenseRecordMVC/ExpenseRecordMVC/Views/User/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxQcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Github/ExpenseRecord/ExpenseRecord/ExpenseRecordMVC/ExpenseRecordMVC/Views/User/SignUp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxTaWduVXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Github/ExpenseRecord/ExpenseRecord/ExpenseRecordMVC/ExpenseRecordMVC/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Github/ExpenseRecord/ExpenseRecordMVC/ExpenseRecordMVC/Views/_ViewStart.cshtml]
+[D:/Github/ExpenseRecord/ExpenseRecord/ExpenseRecordMVC/ExpenseRecordMVC/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Github/ExpenseRecord/ExpenseRecordMVC/ExpenseRecordMVC/Views/Shared/_Layout.cshtml]
+[D:/Github/ExpenseRecord/ExpenseRecord/ExpenseRecordMVC/ExpenseRecordMVC/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-4c9c4hr732

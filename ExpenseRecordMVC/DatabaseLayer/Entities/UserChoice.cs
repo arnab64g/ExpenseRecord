@@ -7,6 +7,7 @@ namespace DatabaseLayer.Entities
         [Key]
         public int Id { get; set; }
         public string? Username { get; set; }
-        public int? CategoryID { get; set; }
+        [Required(ErrorMessage = "Category name cannot be empty.")]
+        public string? CategoryName { get; set; }
     }
 }

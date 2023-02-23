@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Github\\ExpenseRecord\\ExpenseRecordMVC\\DatabaseLayer\\DatabaseLayer.csproj": {}
+    "D:\\Github\\ExpenseRecord\\ExpenseRecord\\ExpenseRecordMVC\\DatabaseLayer\\DatabaseLayer.csproj": {}
   },
   "projects": {
-    "D:\\Github\\ExpenseRecord\\ExpenseRecordMVC\\DatabaseLayer\\DatabaseLayer.csproj": {
+    "D:\\Github\\ExpenseRecord\\ExpenseRecord\\ExpenseRecordMVC\\DatabaseLayer\\DatabaseLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Github\\ExpenseRecord\\ExpenseRecordMVC\\DatabaseLayer\\DatabaseLayer.csproj",
+        "projectUniqueName": "D:\\Github\\ExpenseRecord\\ExpenseRecord\\ExpenseRecordMVC\\DatabaseLayer\\DatabaseLayer.csproj",
         "projectName": "DatabaseLayer",
-        "projectPath": "D:\\Github\\ExpenseRecord\\ExpenseRecordMVC\\DatabaseLayer\\DatabaseLayer.csproj",
+        "projectPath": "D:\\Github\\ExpenseRecord\\ExpenseRecord\\ExpenseRecordMVC\\DatabaseLayer\\DatabaseLayer.csproj",
         "packagesPath": "C:\\Users\\arnab\\.nuget\\packages\\",
-        "outputPath": "D:\\Github\\ExpenseRecord\\ExpenseRecordMVC\\DatabaseLayer\\obj\\",
+        "outputPath": "D:\\Github\\ExpenseRecord\\ExpenseRecord\\ExpenseRecordMVC\\DatabaseLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\arnab\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,11 +40,27 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.3, )"
             },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.3, )"
             }

@@ -1,0 +1,14 @@
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\DatabaseLayer\obj\Debug\net7.0\DatabaseLayer.csproj.AssemblyReference.cache
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\DatabaseLayer\obj\Debug\net7.0\DatabaseLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\DatabaseLayer\obj\Debug\net7.0\DatabaseLayer.AssemblyInfoInputs.cache
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\DatabaseLayer\obj\Debug\net7.0\DatabaseLayer.AssemblyInfo.cs
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\DatabaseLayer\obj\Debug\net7.0\DatabaseLayer.csproj.CoreCompileInputs.cache
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\DatabaseLayer\bin\Debug\net7.0\DatabaseLayer.deps.json
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\DatabaseLayer\bin\Debug\net7.0\DatabaseLayer.runtimeconfig.json
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\DatabaseLayer\bin\Debug\net7.0\DatabaseLayer.dll
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\DatabaseLayer\bin\Debug\net7.0\DatabaseLayer.pdb
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\DatabaseLayer\obj\Debug\net7.0\DatabaseLayer.dll
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\DatabaseLayer\obj\Debug\net7.0\refint\DatabaseLayer.dll
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\DatabaseLayer\obj\Debug\net7.0\DatabaseLayer.pdb
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\DatabaseLayer\obj\Debug\net7.0\DatabaseLayer.genruntimeconfig.cache
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\DatabaseLayer\obj\Debug\net7.0\ref\DatabaseLayer.dll

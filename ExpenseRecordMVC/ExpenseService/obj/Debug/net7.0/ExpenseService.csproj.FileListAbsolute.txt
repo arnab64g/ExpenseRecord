@@ -1,0 +1,15 @@
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExpenseService\bin\Debug\net7.0\ExpenseService.deps.json
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExpenseService\bin\Debug\net7.0\ExpenseService.dll
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExpenseService\bin\Debug\net7.0\ExpenseService.pdb
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExpenseService\bin\Debug\net7.0\DatabaseLayer.dll
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExpenseService\bin\Debug\net7.0\DatabaseLayer.pdb
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExpenseService\obj\Debug\net7.0\ExpenseService.csproj.AssemblyReference.cache
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExpenseService\obj\Debug\net7.0\ExpenseService.GeneratedMSBuildEditorConfig.editorconfig
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExpenseService\obj\Debug\net7.0\ExpenseService.AssemblyInfoInputs.cache
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExpenseService\obj\Debug\net7.0\ExpenseService.AssemblyInfo.cs
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExpenseService\obj\Debug\net7.0\ExpenseService.csproj.CoreCompileInputs.cache
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExpenseService\obj\Debug\net7.0\ExpenseService.csproj.CopyComplete
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExpenseService\obj\Debug\net7.0\ExpenseService.dll
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExpenseService\obj\Debug\net7.0\refint\ExpenseService.dll
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExpenseService\obj\Debug\net7.0\ExpenseService.pdb
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExpenseService\obj\Debug\net7.0\ref\ExpenseService.dll

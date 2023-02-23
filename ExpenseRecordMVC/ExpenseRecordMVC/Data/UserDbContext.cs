@@ -5,7 +5,8 @@ namespace ExpenseRecordMVC.Data
 {
     public class UserDbContext : IdentityDbContext
     {
-        public UserDbContext(DbContextOptions<UserDbContext> options) : base(options)
+        public UserDbContext(DbContextOptions<UserDbContext> options) : 
+            base(options)
         {
 
         }

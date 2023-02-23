@@ -1,0 +1,12 @@
+﻿using DatabaseLayer.Entities;
+using Microsoft.AspNetCore.Identity;
+
+namespace DatabaseLayer.Interface
+{
+    public interface IUserRepository
+    {
+        public Task CreateUserAsync(UserManager<IdentityUser> userManager, IdentityUser identityUser, string password);
+        public Task SaveUserDetailsAsync(UserDetails userDetails);
+        public Task<UserDetails> GetUserDetailsAsync(string username);
+    }
+}
