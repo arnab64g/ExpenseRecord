@@ -3772,6 +3772,16 @@
         "runtime": {
           "bin/placeholder/ExpenseService.dll": {}
         }
+      },
+      "ExtraLibraries/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/ExtraLibraries.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ExtraLibraries.dll": {}
+        }
       }
     }
   },
@@ -10811,12 +10821,18 @@
       "type": "project",
       "path": "../ExpenseService/ExpenseService.csproj",
       "msbuildProject": "../ExpenseService/ExpenseService.csproj"
+    },
+    "ExtraLibraries/1.0.0": {
+      "type": "project",
+      "path": "../ExtraLibraries/ExtraLibraries.csproj",
+      "msbuildProject": "../ExtraLibraries/ExtraLibraries.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "DatabaseLayer >= 1.0.0",
       "ExpenseService >= 1.0.0",
+      "ExtraLibraries >= 1.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 7.0.3",
       "Microsoft.EntityFrameworkCore >= 7.0.3",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.3",
@@ -10857,6 +10873,9 @@
             },
             "D:\\Github\\ExpenseRecord\\ExpenseRecord\\ExpenseRecordMVC\\ExpenseService\\ExpenseService.csproj": {
               "projectPath": "D:\\Github\\ExpenseRecord\\ExpenseRecord\\ExpenseRecordMVC\\ExpenseService\\ExpenseService.csproj"
+            },
+            "D:\\Github\\ExpenseRecord\\ExpenseRecord\\ExpenseRecordMVC\\ExtraLibraries\\ExtraLibraries.csproj": {
+              "projectPath": "D:\\Github\\ExpenseRecord\\ExpenseRecord\\ExpenseRecordMVC\\ExtraLibraries\\ExtraLibraries.csproj"
             }
           }
         }

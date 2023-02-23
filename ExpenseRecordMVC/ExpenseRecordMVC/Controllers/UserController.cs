@@ -31,7 +31,7 @@ namespace ExpenseRecordMVC.Controllers
             
             if (res.Succeeded)
             {
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Expense", "ExpenseList");
             }
 
             return View(loginModel);
@@ -81,6 +81,13 @@ namespace ExpenseRecordMVC.Controllers
             {
                 return View();
             }
+        }
+
+        public async Task<IActionResult> Logout()
+        {
+            await signInManager.SignOutAsync();
+
+            return RedirectToAction("Login", "User");
         }
     }
 }

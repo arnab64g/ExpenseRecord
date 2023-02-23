@@ -1,0 +1,12 @@
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExtraLibraries\bin\Debug\net7.0\ExtraLibraries.deps.json
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExtraLibraries\bin\Debug\net7.0\ExtraLibraries.dll
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExtraLibraries\bin\Debug\net7.0\ExtraLibraries.pdb
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExtraLibraries\obj\Debug\net7.0\ExtraLibraries.csproj.AssemblyReference.cache
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExtraLibraries\obj\Debug\net7.0\ExtraLibraries.GeneratedMSBuildEditorConfig.editorconfig
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExtraLibraries\obj\Debug\net7.0\ExtraLibraries.AssemblyInfoInputs.cache
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExtraLibraries\obj\Debug\net7.0\ExtraLibraries.AssemblyInfo.cs
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExtraLibraries\obj\Debug\net7.0\ExtraLibraries.csproj.CoreCompileInputs.cache
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExtraLibraries\obj\Debug\net7.0\ExtraLibraries.dll
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExtraLibraries\obj\Debug\net7.0\refint\ExtraLibraries.dll
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExtraLibraries\obj\Debug\net7.0\ExtraLibraries.pdb
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExtraLibraries\obj\Debug\net7.0\ref\ExtraLibraries.dll

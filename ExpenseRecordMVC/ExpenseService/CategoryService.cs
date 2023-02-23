@@ -13,14 +13,30 @@ namespace ExpenseService
             this.categoryRepository = categoryRepository;
         }
 
-        public async Task<List<UserChoice>> GetUserChoicesAsync(string uname)
+        public async Task<List<UserChoice>> GetUserChoicesAsync(string? uname)
         {
-            return await categoryRepository.GetUserChoiceAsync(uname);
+            var list = await categoryRepository.GetUserChoiceAsync(uname);
+            return list.OrderBy(d => d.CategoryName).ToList();
         }
 
         public async Task<bool> CreateCategoryAsync(UserChoice userChoice)
         {
             return await categoryRepository.CreateCategoryAsync(userChoice);
+        }
+
+        public async Task<UserChoice?> UserChoiceByIdAsync(int id)
+        {
+            return await categoryRepository.UserChoiceByIdAsync(id);
+        }
+
+        public async Task<bool?> SaveChoiceAsync(int id, string? newName)
+        {
+            return await categoryRepository.SaveChoiceAsync(id, newName);
+        }
+
+        public async Task<bool?> DeleteChoiceAsync(int id)
+        {
+            return await categoryRepository.DeleteChoiceAsync(id);
         }
     }
 }
