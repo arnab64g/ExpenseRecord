@@ -1,13 +1,24 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using ExtraLibraries;
 
 namespace ExpenseRecordMVC.Models
 {
-    public class ExpenseAddModel
+    public class ExpenseViewCore
     {
-        public DateTimeOffset Date { get; set; }
-        public decimal Amount { get; set; }
+        [CustomValidayion(ErrorMessage = "Insert a Valid Date")]
+        public DateTimeOffset? Date { get; set; } = DateTimeOffset.Now;
+        public decimal? Amount { get; set; }
         [Display(Name = "Select a category")]
-        public int CategoryId { get; set; }
-        public List<CategorySelectItem>? Categories { get; set; }
+        public string? CategoryName { get; set; }
+    }
+
+    public class ExpenseAddModel : ExpenseViewCore
+    {
+        public List<string>? Categories { get; set; } = new List<string>();
+    }
+
+    public class ExpenseEditModel : ExpenseAddModel
+    {
+        public int Id { get; set; }
     }
 }

@@ -65,5 +65,13 @@ namespace DatabaseLayer
                 return true;
             }
         }
+
+        public async Task<int> GerUserChoiceIdAsync(string? userName, string? CategoryName)
+        {
+            var id = await expenseDbContext.UserChoices.Where(d => d.Username==userName && d.CategoryName == CategoryName)
+                .Select(d => d.Id).FirstOrDefaultAsync();
+
+            return id;
+        }
     }
 }

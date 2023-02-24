@@ -9,5 +9,6 @@ namespace DatabaseLayer.Interface
         public Task<UserChoice?> UserChoiceByIdAsync(int id);
         public Task<bool?> SaveChoiceAsync(int id, string? newName);
         public Task<bool?> DeleteChoiceAsync(int id);
+        public Task<int> GerUserChoiceIdAsync(string? userName, string? CategoryName);
     }
 }

@@ -31,7 +31,7 @@ namespace ExpenseRecordMVC.Controllers
             
             if (res.Succeeded)
             {
-                return RedirectToAction("Expense", "ExpenseList");
+                return RedirectToAction("ExpenseList", "Expense");
             }
 
             return View(loginModel);

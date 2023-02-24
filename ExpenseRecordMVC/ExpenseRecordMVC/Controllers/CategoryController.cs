@@ -2,7 +2,6 @@
 using ExpenseService.Interface;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using ExtraLibraries;
 
 namespace ExpenseRecordMVC.Controllers
 {

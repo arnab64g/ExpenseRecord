@@ -36,12 +36,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxBZGRFeHBlbnNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Github/ExpenseRecord/ExpenseRecord/ExpenseRecordMVC/ExpenseRecordMVC/Views/Expense/ExpenseList.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxFeHBlbnNlTGlzdC5jc2h0bWw=
+[D:/Github/ExpenseRecord/ExpenseRecord/ExpenseRecordMVC/ExpenseRecordMVC/Views/Expense/DeleteExpense.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxEZWxldGVFeHBlbnNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Github/ExpenseRecord/ExpenseRecord/ExpenseRecordMVC/ExpenseRecordMVC/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+[D:/Github/ExpenseRecord/ExpenseRecord/ExpenseRecordMVC/ExpenseRecordMVC/Views/Expense/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Github/ExpenseRecord/ExpenseRecord/ExpenseRecordMVC/ExpenseRecordMVC/Views/Expense/ExpenseList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxFeHBlbnNlTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Github/ExpenseRecord/ExpenseRecord/ExpenseRecordMVC/ExpenseRecordMVC/Views/Shared/loginState.cshtml]
