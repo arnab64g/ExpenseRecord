@@ -1,14 +1,13 @@
 ﻿@model IEnumerable<DatabaseLayer.Entities.ExpenseView>
 
 @{
-    ViewData["Title"] = "ExpenseList";
+    ViewData["Title"] = "Filtered List";
 }
 
-<h1>Expense List</h1>
+<h1>FilteredList</h1>
 
 <p>
-    <a asp-action="AddExpense"> Create New</a>
-
+    <a asp-action="AddExpense" asp-controller="Expense">Create New</a>
 </p>
 <table class="table">
     <thead>
@@ -17,10 +16,10 @@
                 @Html.DisplayNameFor(model => model.Date)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CategoryName)
+                @Html.DisplayNameFor(model => model.Amount)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Amount)
+                @Html.DisplayNameFor(model => model.CategoryName)
             </th>
             <th></th>
         </tr>
@@ -28,19 +27,18 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            
             <td>
                 @Html.DisplayFor(modelItem => item.Date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CategoryName)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Amount)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.Id}) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                @Html.DisplayFor(modelItem => item.CategoryName)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", "Expense", new { id = item.Id}) |
+                @Html.ActionLink("Delete", "Delete", "Expense", new { id = item.Id})
             </td>
         </tr>
 }

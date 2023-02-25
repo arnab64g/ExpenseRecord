@@ -48,6 +48,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZW5zZVxFeHBlbnNlTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Github/ExpenseRecord/ExpenseRecord/ExpenseRecordMVC/ExpenseRecordMVC/Views/Filter/FilteredList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsdGVyXEZpbHRlcmVkTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Github/ExpenseRecord/ExpenseRecord/ExpenseRecordMVC/ExpenseRecordMVC/Views/Filter/FilterPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlsdGVyXEZpbHRlclBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Github/ExpenseRecord/ExpenseRecord/ExpenseRecordMVC/ExpenseRecordMVC/Views/Shared/loginState.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGxvZ2luU3RhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

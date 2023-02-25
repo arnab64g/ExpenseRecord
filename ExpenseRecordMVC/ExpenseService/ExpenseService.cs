@@ -33,6 +33,18 @@ namespace ExpenseService
             return true;
         }
 
+        public List<ExpenseView?>? FilterByCategoryAsync(List<ExpenseView> expenseViews, List<string?> categoryName)
+        {
+            var list = expenseViews.Where(d => categoryName.Contains(d.CategoryName)).ToList();
+            
+            return list;
+        }
+
+        public async Task<List<ExpenseView>?> GetExpenseByDate(DateTimeOffset? FromDate, DateTimeOffset? ToDate, string? UserName)
+        {
+            return await expenseRepository.GetExpenseByDate(FromDate, ToDate, UserName);
+        }
+
         public async Task<List<ExpenseView>?> GetExpenseListAsync(string? UserName)
         {
             return await expenseRepository.GetExpenseListAsync(UserName);

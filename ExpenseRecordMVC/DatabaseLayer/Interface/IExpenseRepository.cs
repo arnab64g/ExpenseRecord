@@ -12,5 +12,6 @@ namespace DatabaseLayer.Interface
         public Task<bool?> DeleteExpenseAsync(Expense expense);
         public Task<decimal?> GetAmountByIdAsync(int id);
         public Task<bool?> UpdateExpenseAsync(Expense expense);
+        public Task<List<ExpenseView>?> GetExpenseByDate(DateTimeOffset? FromDate, DateTimeOffset? ToDate, string? UserName);
     }
 }

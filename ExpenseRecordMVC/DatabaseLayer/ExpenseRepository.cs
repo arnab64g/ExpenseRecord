@@ -34,6 +34,7 @@ namespace DatabaseLayer
                                   Amount = expense.Amount,
                                   Date = expense.Date
                               }).OrderBy(d => d.Date).ToListAsync();
+            
             return list;              
         }
 
@@ -93,6 +94,7 @@ namespace DatabaseLayer
         public async Task<bool?> UpdateExpenseAsync(Expense expense)
         {
             var OldExpense = await dbContext.Expenses.Where(e => e.Id == expense.Id).FirstOrDefaultAsync();
+            
             if (OldExpense != null)
             {
                 OldExpense.Amount = expense.Amount;
@@ -101,7 +103,25 @@ namespace DatabaseLayer
 
                 await dbContext.SaveChangesAsync(true);
             }
+
             return true;
+        }
+
+        public async Task<List<ExpenseView>?> GetExpenseByDate(DateTimeOffset? FromDate, DateTimeOffset? ToDate, string? UserName)
+        {
+            var list = await (from expense in dbContext.Expenses.Where(d => d.Username == UserName && d.Date >= FromDate && d.Date <= ToDate)
+                             join uc in dbContext.UserChoices.Where(d => d.Username == UserName)
+                             on expense.CategoryId equals uc.Id
+                             select new ExpenseView
+                             {
+                                 Id = expense.Id,
+                                 CategoryName = uc.CategoryName,
+                                 Amount = expense.Amount,
+                                 Date = expense.Date
+                             }).OrderBy(d => d.Date).ToListAsync();
+
+            return list;
+
         }
     }
 }
