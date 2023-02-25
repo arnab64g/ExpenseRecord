@@ -10,8 +10,8 @@
     <a asp-action="AddExpense"> Create New</a>
 
 </p>
-<table class="table">
-    <thead>
+<table class="table table-bordered">
+    <thead class="table-dark">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Date)
@@ -38,8 +38,10 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Amount)
             </td>
+            
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id = item.Id}) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id}) |
                 @Html.ActionLink("Delete", "Delete", new { id = item.Id })
             </td>
         </tr>

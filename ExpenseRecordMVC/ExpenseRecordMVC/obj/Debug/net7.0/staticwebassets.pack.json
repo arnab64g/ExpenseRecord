@@ -245,6 +245,10 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "D:\\Github\\ExpenseRecord\\ExpenseRecord\\ExpenseRecordMVC\\ExpenseRecordMVC\\wwwroot\\main_icon.png",
+      "PackagePath": "staticwebassets\\main_icon.png"
+    },
+    {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.ExpenseRecordMVC.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

@@ -10,6 +10,7 @@ namespace ExpenseRecordMVC.Models
 
         [Display(Name = "Select a category")]
         public string? CategoryName { get; set; }
+        public string? Description { get; set; }
     }
 
     public class ExpenseAddModel : ExpenseViewCore

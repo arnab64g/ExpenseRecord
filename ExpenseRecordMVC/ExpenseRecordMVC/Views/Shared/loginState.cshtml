@@ -5,10 +5,10 @@
     <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
         <ul class="navbar-nav flex-grow-1">
             <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Profile">@User.Identity.Name</a>
+                <a class="user nav-link text-light border border-white rounded" asp-area="" asp-controller="User" asp-action="Profile">@User.Identity.Name</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Logout">Log out</a>
+                <a class="user nav-link text-light bg-danger rounded" asp-area="" asp-controller="User" asp-action="Logout">Log out</a>
             </li>
         </ul>
     </div>
@@ -18,11 +18,17 @@ else
     <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
         <ul class="navbar-nav flex-grow-1">
             <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Login">Login</a>
+                <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Login">Sign In</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="SignUp">SignUp</a>
+                <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="SignUp">Sign Up</a>
             </li>
         </ul>
     </div>
 }
+
+<style>
+    .user{
+        margin-left:20px;
+    }
+</style>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Bhyh6HqjUMZXDH2rBmGrLg+q2C/5kaiNX3GQbW4dvmo=",
+  "Hash": "0Adwygo8LSTNgNWvaqhtoFqJMDtNt+bHWOarAQ8MiiQ=",
   "Source": "ExpenseRecordMVC",
   "BasePath": "_content/ExpenseRecordMVC",
   "Mode": "Default",
@@ -1069,6 +1069,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "D:\\Github\\ExpenseRecord\\ExpenseRecord\\ExpenseRecordMVC\\ExpenseRecordMVC\\wwwroot\\main_icon.png",
+      "SourceId": "ExpenseRecordMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Github\\ExpenseRecord\\ExpenseRecord\\ExpenseRecordMVC\\ExpenseRecordMVC\\wwwroot\\",
+      "BasePath": "_content/ExpenseRecordMVC",
+      "RelativePath": "main_icon.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\main_icon.png"
     }
   ]
 }

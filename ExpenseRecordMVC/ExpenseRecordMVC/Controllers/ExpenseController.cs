@@ -3,6 +3,7 @@ using ExpenseRecordMVC.Models;
 using ExpenseService.Interface;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.FlowAnalysis.DataFlow;
 
 namespace ExpenseRecordMVC.Controllers
 {
@@ -63,6 +64,7 @@ namespace ExpenseRecordMVC.Controllers
                     CategoryId= catId,
                     Amount= expenseAddModel.Amount,
                     Username = User.Identity.Name,
+                    Discription = expenseAddModel.Description
                 };
 
                 var res = await expenseService.AddExpenseAsync(expense);
@@ -94,6 +96,7 @@ namespace ExpenseRecordMVC.Controllers
         public async Task<IActionResult> Edit(int id)
         {
             ExpenseEditModel expenseEditModel = new ExpenseEditModel();
+
             if (signInManager.IsSignedIn(User))
             {
                 var expense = await expenseService.GetExpenseViewByIdAsync(id);
@@ -104,6 +107,7 @@ namespace ExpenseRecordMVC.Controllers
                 expenseEditModel.Amount = expense.Amount;
                 expenseEditModel.Categories = cat.Select(d => d.CategoryName).ToList();
                 expenseEditModel.Date = expense.Date;
+                expenseEditModel.Description = expense.Description;
             }
 
             return View(expenseEditModel);
@@ -129,6 +133,24 @@ namespace ExpenseRecordMVC.Controllers
             }
 
             return RedirectToAction("Edit", "Expense");
+        }
+
+        public async Task<IActionResult> Details(int id)
+        {
+            ExpenseDetailsModel expenseEditModel = new ExpenseDetailsModel();
+
+            if (signInManager.IsSignedIn(User))
+            {
+                var expense = await expenseService.GetExpenseViewByIdAsync(id);
+
+                expenseEditModel.Id = expense.Id;
+                expenseEditModel.CategoryName = expense.CategoryName;
+                expenseEditModel.Amount = expense.Amount;
+                expenseEditModel.Date = expense.Date;
+                expenseEditModel.Discripyion = expense.Description;
+            }
+
+            return View("ExpenseDetails", expenseEditModel);
         }
     }
 }

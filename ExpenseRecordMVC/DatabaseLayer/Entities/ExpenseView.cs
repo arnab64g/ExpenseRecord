@@ -10,5 +10,6 @@ namespace DatabaseLayer.Entities
         [Display(Name = "Category Name")]
         public string? CategoryName { get; set; }
         public decimal? Amount { get; set; }
+        public string? Description { get; set; }
     }
 }

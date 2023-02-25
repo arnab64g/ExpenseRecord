@@ -66,7 +66,7 @@ namespace ExpenseRecordMVC.Controllers
 
             await userService.CreateNewUserAsync(userManager, userDetaild, signUpModel.Password);
 
-            return View(signUpModel);
+            return View("Login");
         }
 
         public async Task<IActionResult> Profile()

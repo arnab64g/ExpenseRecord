@@ -9,8 +9,8 @@
 <p>
     <a asp-action="AddExpense" asp-controller="Expense">Create New</a>
 </p>
-<table class="table">
-    <thead>
+<table class="table table-bordered">
+    <thead class="table-dark">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Date)
@@ -38,6 +38,7 @@
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", "Expense", new { id = item.Id}) |
+                    @Html.ActionLink("Details", "Details", "Expense", new { id = item.Id}) |
                 @Html.ActionLink("Delete", "Delete", "Expense", new { id = item.Id})
             </td>
         </tr>

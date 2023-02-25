@@ -4,13 +4,11 @@
     ViewData["Title"] = "View";
 }
 
-<h1>View</h1>
-
 <p>
     <a asp-action="AddNewCategory">Create New</a>
 </p>
-<table class="table">
-    <thead>
+<table class="table table-bordered">
+    <thead class="table-dark">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.CategoryName)

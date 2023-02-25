@@ -32,7 +32,8 @@ namespace DatabaseLayer
                                   Id = expense.Id,
                                   CategoryName = uc.CategoryName,
                                   Amount = expense.Amount,
-                                  Date = expense.Date
+                                  Date = expense.Date,
+                                  Description = expense.Discription
                               }).OrderBy(d => d.Date).ToListAsync();
             
             return list;              
@@ -63,7 +64,8 @@ namespace DatabaseLayer
                 Id = expense.Id,
                 CategoryName = CatName.CategoryName,
                 Amount = expense.Amount,
-                Date = expense.Date
+                Date = expense.Date,
+                Description = expense.Discription
             };
 
             return expenseView;
