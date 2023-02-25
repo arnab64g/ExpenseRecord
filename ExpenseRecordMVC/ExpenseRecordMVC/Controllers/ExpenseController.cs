@@ -3,7 +3,6 @@ using ExpenseRecordMVC.Models;
 using ExpenseService.Interface;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.CodeAnalysis.FlowAnalysis.DataFlow;
 
 namespace ExpenseRecordMVC.Controllers
 {
@@ -25,6 +24,7 @@ namespace ExpenseRecordMVC.Controllers
             if (signInManager.IsSignedIn(User))
             {
                 var list = await expenseService.GetExpenseListAsync(User.Identity.Name);
+                list.Reverse();
 
                 return View(list);
             }
