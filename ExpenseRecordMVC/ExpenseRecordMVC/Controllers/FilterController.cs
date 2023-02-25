@@ -55,15 +55,30 @@ namespace ExpenseRecordMVC.Controllers
                 filterModel.CategoryFilters = new List<string>();
             }
 
-            var data = new List<ExpenseView>();
+            var data = new FilteredViewModel();
             
             if (signInManager.IsSignedIn(User))
             {
-                data = await expenseService.GetExpenseByDate(filterModel.FromDate, filterModel.ToDate, User.Identity.Name);
+                var list = await expenseService.GetExpenseByDate(filterModel.FromDate, filterModel.ToDate, User.Identity.Name);
                 
                 if (filterModel.CategoryFilters.Count != 0 && data != null)
                 {
-                    data = expenseService.FilterByCategoryAsync(data, filterModel.CategoryFilters);
+                    list = expenseService.FilterByCategoryAsync(list, filterModel.CategoryFilters);
+                }
+
+                if (list == null)
+                {
+                    list = new List<ExpenseView>();
+                }
+
+                data.expenseViews = list;
+                data.FromDate = filterModel.FromDate;
+                data.ToDate = filterModel.ToDate;
+                data.TotalCost = 0;
+
+                foreach(var item in list)
+                {
+                    data.TotalCost += item.Amount;
                 }
             }
 
