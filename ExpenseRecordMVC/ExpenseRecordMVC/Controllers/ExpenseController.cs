@@ -43,6 +43,7 @@ namespace ExpenseRecordMVC.Controllers
                     clist = new List<UserChoice>();
                 }
 
+                expenseAddModel.Date = DateTimeOffset.Now;
                 expenseAddModel.Categories = clist.Select(d => d.CategoryName).ToList();
             }
 

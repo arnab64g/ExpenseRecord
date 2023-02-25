@@ -2,6 +2,7 @@
 using DatabaseLayer.Interface;
 using ExpenseService.Interface;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.VisualBasic;
 
 namespace ExpenseService
 {
@@ -30,6 +31,11 @@ namespace ExpenseService
         public async Task<UserDetails> GetUserDetailsAsync(string username)
         {
             return await userRepository.GetUserDetailsAsync(username);
+        }
+
+        public async Task<DateTimeOffset?> UserCreatedDateAsync(string? userName)
+        {
+            return await userRepository.UserCreatedDateAsync(userName);
         }
     }
 }

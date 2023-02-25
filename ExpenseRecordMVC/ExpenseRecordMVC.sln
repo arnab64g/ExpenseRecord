@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatabaseLayer", "DatabaseLa
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpenseService", "ExpenseService\ExpenseService.csproj", "{53EE9A67-61EA-4B1F-90EC-E82B258ACA0A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExtraLibraries", "ExtraLibraries\ExtraLibraries.csproj", "{CAA6B43B-0822-4A73-9533-25E9C793D7A7}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{53EE9A67-61EA-4B1F-90EC-E82B258ACA0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53EE9A67-61EA-4B1F-90EC-E82B258ACA0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53EE9A67-61EA-4B1F-90EC-E82B258ACA0A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CAA6B43B-0822-4A73-9533-25E9C793D7A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CAA6B43B-0822-4A73-9533-25E9C793D7A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CAA6B43B-0822-4A73-9533-25E9C793D7A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CAA6B43B-0822-4A73-9533-25E9C793D7A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

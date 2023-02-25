@@ -9,5 +9,6 @@ namespace DatabaseLayer.Interface
         public Task SaveUserDetailsAsync(UserDetails userDetails);
         public Task<UserDetails> GetUserDetailsAsync(string? username);
         public Task<bool> ChangeTotalAmountAsync(string? userName, decimal? Amount);
+        public Task<DateTimeOffset?> UserCreatedDateAsync(string? userName);
     }
 }

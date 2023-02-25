@@ -24,7 +24,6 @@
   <ItemGroup>
     <ProjectReference Include="..\DatabaseLayer\DatabaseLayer.csproj" />
     <ProjectReference Include="..\ExpenseService\ExpenseService.csproj" />
-    <ProjectReference Include="..\ExtraLibraries\ExtraLibraries.csproj" />
   </ItemGroup>
 
 </Project>

@@ -11,25 +11,28 @@ namespace ExpenseRecordMVC.Controllers
         private readonly SignInManager<IdentityUser> signInManager;
         private readonly ICategoryService categoryService;
         private readonly IExpenseService expenseService;
+        private readonly IUserService userService;
 
-        public FilterController(SignInManager<IdentityUser> signInManager, ICategoryService categoryService, IExpenseService expenseService)
+        public FilterController(SignInManager<IdentityUser> signInManager, ICategoryService categoryService, 
+            IExpenseService expenseService, IUserService userService)
         {
             this.signInManager = signInManager;
             this.categoryService = categoryService;
             this.expenseService = expenseService;
+            this.userService = userService;
         }
 
         public async Task<IActionResult> FilterPartial()
         {
             FilterModel filterModel = new FilterModel();
             
-
-            filterModel.FromDate = DateTime.Now;
-            filterModel.ToDate = DateTime.Now;
-            
             if (signInManager.IsSignedIn(User))
             {
+                filterModel.FromDate = await userService.UserCreatedDateAsync(User.Identity.Name);
+                filterModel.ToDate = DateTime.Now;
+                
                 var flist = await categoryService.GetUserChoicesAsync(User.Identity.Name);
+                
                 if (flist != null)
                 {
                     filterModel.CategoryFilters = flist.Select(d => d.CategoryName).ToList();

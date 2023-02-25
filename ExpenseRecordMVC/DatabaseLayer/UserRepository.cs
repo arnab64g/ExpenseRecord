@@ -52,5 +52,13 @@ namespace DatabaseLayer
 
             return true;
         }
+
+        public async Task<DateTimeOffset?> UserCreatedDateAsync(string? userName)
+        {
+            var userCreatedDate = await expenseDbContext.UserDetails.Where(u => u.Username == userName)
+                .Select(d => d.Created).FirstOrDefaultAsync();
+
+            return userCreatedDate;
+        }
     }
 }

@@ -283,5 +283,3 @@ D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExpenseRecordMVC\bin\Debu
 D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExpenseRecordMVC\bin\Debug\net7.0\ExpenseService.dll
 D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExpenseRecordMVC\bin\Debug\net7.0\DatabaseLayer.pdb
 D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExpenseRecordMVC\bin\Debug\net7.0\ExpenseService.pdb
-D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExpenseRecordMVC\bin\Debug\net7.0\ExtraLibraries.dll
-D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExpenseRecordMVC\bin\Debug\net7.0\ExtraLibraries.pdb
