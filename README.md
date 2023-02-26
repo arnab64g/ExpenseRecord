@@ -5,6 +5,7 @@ This project is created for the purpose of practicing ASP.NET Core MVC. Multiple
 3. User can see the expenses record, newer is first.
 4. User can filter expense records based on date range or by selecting categories.
 
-![Screenshot (10)](https://user-images.githubusercontent.com/79049651/221363134-aef0cc73-d75c-4179-b382-2f87f777b7e0.png)
-![Screenshot (8)](https://user-images.githubusercontent.com/79049651/221363136-61adfe63-0ffa-47f7-8c12-08ec7e882ecd.png)
-![Screenshot (9)](https://user-images.githubusercontent.com/79049651/221363138-c88abd9b-a6e0-4e8f-a7e5-ac445cc37714.png)
+![Screenshot (11)](https://user-images.githubusercontent.com/79049651/221398408-68e20871-8a67-4d64-9a81-102e3bf8a4c8.png)
+![Screenshot (12)](https://user-images.githubusercontent.com/79049651/221398409-d5c4c650-d793-4579-9577-abadad497071.png)
+
+![Screenshot (13)](https://user-images.githubusercontent.com/79049651/221398406-9e482261-f1a4-412d-98fb-88852a197a5c.png)
