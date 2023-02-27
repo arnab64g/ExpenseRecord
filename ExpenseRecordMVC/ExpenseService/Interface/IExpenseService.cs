@@ -10,6 +10,6 @@ namespace ExpenseService.Interface
         public Task<bool?> DeleteExpenseById(int id);
         public Task<bool?> UpdateExpenseAsync(Expense expense);
         public Task<List<ExpenseView>> GetExpenseByDate(DateTimeOffset? FromDate, DateTimeOffset? ToDate, string? UserName);
-        public List<ExpenseView> FilterByCategoryAsync(List<ExpenseView> expenseViews, List<string> categoryName);
+        public List<ExpenseView> FilterByCategoryAsync(List<ExpenseView> expenseViews, HashSet<string?>? categoryName);
     }
 }

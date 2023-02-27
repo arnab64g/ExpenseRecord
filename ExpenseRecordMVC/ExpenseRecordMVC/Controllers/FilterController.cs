@@ -35,11 +35,11 @@ namespace ExpenseRecordMVC.Controllers
                 
                 if (flist != null)
                 {
-                    filterModel.CategoryFilters = flist.Select(d => d.CategoryName).ToList();
+                    filterModel.CategoryFilters = flist.Select(d => d.CategoryName).ToHashSet();
                 }
                 else
                 {
-                    filterModel.CategoryFilters = new List<string>();
+                    filterModel.CategoryFilters = new HashSet<string>();
                 }
                 
             }
@@ -52,7 +52,7 @@ namespace ExpenseRecordMVC.Controllers
         {
             if (filterModel.CategoryFilters == null)
             {
-                filterModel.CategoryFilters = new List<string>();
+                filterModel.CategoryFilters = new HashSet<string>();
             }
 
             var data = new FilteredViewModel();

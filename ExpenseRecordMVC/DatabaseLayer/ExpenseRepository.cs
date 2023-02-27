@@ -123,7 +123,6 @@ namespace DatabaseLayer
                              }).OrderBy(d => d.Date).ToListAsync();
 
             return list;
-
         }
     }
 }

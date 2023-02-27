@@ -23,6 +23,14 @@ namespace DatabaseLayer
 
         public async Task<bool> CreateCategoryAsync(UserChoice userChoice)
         {
+            var res = await expenseDbContext.UserChoices.AnyAsync(d => d.Username== userChoice.Username && 
+                d.CategoryName == userChoice.Username);
+
+            if (res)
+            {
+                return false;
+            }
+            
             await expenseDbContext.UserChoices.AddAsync(userChoice);
             await expenseDbContext.SaveChangesAsync();
 

@@ -33,7 +33,7 @@ namespace ExpenseService
             return true;
         }
 
-        public List<ExpenseView>? FilterByCategoryAsync(List<ExpenseView> expenseViews, List<string?> categoryName)
+        public List<ExpenseView>? FilterByCategoryAsync(List<ExpenseView> expenseViews, HashSet<string?>? categoryName)
         {
             var list = expenseViews.Where(d => categoryName.Contains(d.CategoryName)).ToList();
             

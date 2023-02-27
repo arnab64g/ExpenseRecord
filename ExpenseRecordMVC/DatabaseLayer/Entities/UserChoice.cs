@@ -2,6 +2,7 @@
 
 namespace DatabaseLayer.Entities
 {
+    [Display(Name = "User Choice")]
     public class UserChoice
     {
         [Key]
