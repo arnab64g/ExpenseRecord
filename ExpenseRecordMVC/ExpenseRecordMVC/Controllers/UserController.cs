@@ -3,6 +3,7 @@ using ExpenseRecordMVC.Models;
 using ExpenseService.Interface;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ExpenseRecordMVC.Controllers
 {
@@ -10,13 +11,16 @@ namespace ExpenseRecordMVC.Controllers
     {
         private readonly UserManager<IdentityUser> userManager;
         private readonly SignInManager<IdentityUser> signInManager;
+        private readonly RoleManager<IdentityRole> roleManager;
         private readonly IUserService userService;
 
-        public UserController(UserManager<IdentityUser> userManager, IUserService userService, SignInManager<IdentityUser> signInManager)
+        public UserController(UserManager<IdentityUser> userManager, IUserService userService, 
+            SignInManager<IdentityUser> signInManager, RoleManager<IdentityRole> roleManager)
         {
             this.userManager = userManager;
             this.userService = userService;
             this.signInManager = signInManager;
+            this.roleManager = roleManager;
         }
 
         public IActionResult Login()
@@ -88,6 +92,22 @@ namespace ExpenseRecordMVC.Controllers
             await signInManager.SignOutAsync();
 
             return RedirectToAction("Login", "User");
+        }
+
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> GetAllUser()
+        {
+            var data = await userService.GetAllUsersAsync();
+
+            return View("AllUserData", data);
+        }
+
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> Details(int id)
+        {
+            var data = await userService.GetUserDetailsByIdAsync(id);
+
+            return View(data);
         }
     }
 }

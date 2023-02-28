@@ -60,5 +60,34 @@ namespace DatabaseLayer
 
             return userCreatedDate;
         }
+
+        public async Task<List<UserListData>> GetAllUserAsync()
+        {
+            var allUsers = await expenseDbContext.UserDetails.Select(d => new UserListData
+            {
+                Id = d.Id,
+                Name = d.Name,
+                Username = d.Username,
+                Photo = d.Photo
+            }).ToListAsync();
+
+            return allUsers;
+        }
+
+        public async Task<UserDetailsCore?> GetUserDetailsByIdAsync(int id)
+        {
+            var user = await expenseDbContext.UserDetails.Select(d => new UserDetailsCore
+            {
+                Id = d.Id,
+                Name = d.Name,
+                Username = d.Username,
+                Photo = d.Photo,
+                Email = d.Email,
+                Address = d.Address,
+                Created = d.Created
+            }).FirstOrDefaultAsync();
+
+            return user;
+        }
     }
 }

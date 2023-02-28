@@ -28,9 +28,19 @@ namespace ExpenseService
             return userDetails;
         }
 
+        public async Task<List<UserListData>> GetAllUsersAsync()
+        {
+            return await userRepository.GetAllUserAsync();  
+        }
+
         public async Task<UserDetails> GetUserDetailsAsync(string username)
         {
             return await userRepository.GetUserDetailsAsync(username);
+        }
+
+        public async Task<UserDetailsCore?> GetUserDetailsByIdAsync(int id)
+        {
+            return await userRepository.GetUserDetailsByIdAsync(id);
         }
 
         public async Task<DateTimeOffset?> UserCreatedDateAsync(string? userName)

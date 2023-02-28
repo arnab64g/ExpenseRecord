@@ -1,7 +1,18 @@
 ﻿@inject Microsoft.AspNetCore.Identity.SignInManager<Microsoft.AspNetCore.Identity.IdentityUser> user
+@inject Microsoft.AspNetCore.Identity.RoleManager<Microsoft.AspNetCore.Identity.IdentityRole> role
 
 @if (user.IsSignedIn(User))
 {
+    if (User.IsInRole("Admin"))
+    {
+        <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+            <ul class="navbar-nav flex-grow-1">
+                <li class="nav-item">
+                    <a class="user nav-link text-light" asp-area="" asp-controller="User" asp-action="GetAllUser">All Users</a>
+                </li>
+            </ul>
+        </div>
+    }
     <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
         <ul class="navbar-nav flex-grow-1">
             <li class="nav-item">
