@@ -1,6 +1,7 @@
 ﻿using DatabaseLayer.Data;
 using DatabaseLayer.Entities;
 using DatabaseLayer.Interface;
+using ExtraLibraries;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -63,12 +64,13 @@ namespace DatabaseLayer
 
         public async Task<List<UserListData>> GetAllUserAsync()
         {
+            MemoryStream ms = new MemoryStream();
             var allUsers = await expenseDbContext.UserDetails.Select(d => new UserListData
             {
                 Id = d.Id,
                 Name = d.Name,
                 Username = d.Username,
-                Photo = d.Photo
+                Photo = ImageForViewOrSave.ByteArrayToImageUrl(d.Photo)
             }).ToListAsync();
 
             return allUsers;

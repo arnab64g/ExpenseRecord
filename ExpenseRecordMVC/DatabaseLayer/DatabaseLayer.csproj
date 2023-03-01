@@ -20,4 +20,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ExtraLibraries\ExtraLibraries.csproj" />
+  </ItemGroup>
+
 </Project>

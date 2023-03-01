@@ -13,3 +13,5 @@ D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExpenseService\obj\Debug\
 D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExpenseService\obj\Debug\net7.0\refint\ExpenseService.dll
 D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExpenseService\obj\Debug\net7.0\ExpenseService.pdb
 D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExpenseService\obj\Debug\net7.0\ref\ExpenseService.dll
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExpenseService\bin\Debug\net7.0\ExtraLibraries.dll
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\ExpenseService\bin\Debug\net7.0\ExtraLibraries.pdb

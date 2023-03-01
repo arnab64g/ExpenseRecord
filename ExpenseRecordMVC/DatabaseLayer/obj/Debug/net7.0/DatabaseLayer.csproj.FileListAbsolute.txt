@@ -12,3 +12,6 @@ D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\DatabaseLayer\obj\Debug\n
 D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\DatabaseLayer\obj\Debug\net7.0\DatabaseLayer.pdb
 D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\DatabaseLayer\obj\Debug\net7.0\DatabaseLayer.genruntimeconfig.cache
 D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\DatabaseLayer\obj\Debug\net7.0\ref\DatabaseLayer.dll
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\DatabaseLayer\bin\Debug\net7.0\ExtraLibraries.dll
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\DatabaseLayer\bin\Debug\net7.0\ExtraLibraries.pdb
+D:\Github\ExpenseRecord\ExpenseRecord\ExpenseRecordMVC\DatabaseLayer\obj\Debug\net7.0\DatabaseLayer.csproj.CopyComplete

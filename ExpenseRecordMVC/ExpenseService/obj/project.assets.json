@@ -1114,6 +1114,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
+          "ExtraLibraries": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.3",
           "Microsoft.EntityFrameworkCore": "7.0.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.3"
@@ -1123,6 +1124,16 @@
         },
         "runtime": {
           "bin/placeholder/DatabaseLayer.dll": {}
+        }
+      },
+      "ExtraLibraries/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/ExtraLibraries.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ExtraLibraries.dll": {}
         }
       }
     }
@@ -3364,6 +3375,11 @@
       "type": "project",
       "path": "../DatabaseLayer/DatabaseLayer.csproj",
       "msbuildProject": "../DatabaseLayer/DatabaseLayer.csproj"
+    },
+    "ExtraLibraries/1.0.0": {
+      "type": "project",
+      "path": "../ExtraLibraries/ExtraLibraries.csproj",
+      "msbuildProject": "../ExtraLibraries/ExtraLibraries.csproj"
     }
   },
   "projectFileDependencyGroups": {

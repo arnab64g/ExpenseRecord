@@ -1214,6 +1214,16 @@
             "rid": "win"
           }
         }
+      },
+      "ExtraLibraries/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/ExtraLibraries.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ExtraLibraries.dll": {}
+        }
       }
     }
   },
@@ -3625,10 +3635,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "ExtraLibraries/1.0.0": {
+      "type": "project",
+      "path": "../ExtraLibraries/ExtraLibraries.csproj",
+      "msbuildProject": "../ExtraLibraries/ExtraLibraries.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "ExtraLibraries >= 1.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 7.0.3",
       "Microsoft.EntityFrameworkCore >= 7.0.3",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.3",
@@ -3662,7 +3678,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Github\\ExpenseRecord\\ExpenseRecord\\ExpenseRecordMVC\\ExtraLibraries\\ExtraLibraries.csproj": {
+              "projectPath": "D:\\Github\\ExpenseRecord\\ExpenseRecord\\ExpenseRecordMVC\\ExtraLibraries\\ExtraLibraries.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

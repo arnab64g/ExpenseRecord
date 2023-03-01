@@ -10,6 +10,7 @@
         "dependencies": {
           "DatabaseLayer": "1.0.0",
           "ExpenseService": "1.0.0",
+          "ExtraLibraries": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.3",
           "Microsoft.EntityFrameworkCore": "7.0.3",
           "Microsoft.EntityFrameworkCore.Design": "7.0.3",
@@ -2342,6 +2343,7 @@
       },
       "DatabaseLayer/1.0.0": {
         "dependencies": {
+          "ExtraLibraries": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.3",
           "Microsoft.EntityFrameworkCore": "7.0.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.3"
@@ -2357,6 +2359,11 @@
         },
         "runtime": {
           "ExpenseService.dll": {}
+        }
+      },
+      "ExtraLibraries/1.0.0": {
+        "runtime": {
+          "ExtraLibraries.dll": {}
         }
       }
     }
@@ -3668,6 +3675,11 @@
       "sha512": ""
     },
     "ExpenseService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ExtraLibraries/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
