@@ -7,25 +7,25 @@ namespace DatabaseLayer
 {
     public class ExpenseRepository : IExpenseRepository
     {
-        private readonly ExpenseDbContext dbContext;
+        private readonly UserDbContext userDbContext;
 
-        public ExpenseRepository() 
+        public ExpenseRepository(UserDbContext userDbContext) 
         {
-            dbContext = new ExpenseDbContext();
+            this.userDbContext = userDbContext;
         }
 
         public async Task<bool> AddExpenseAsync(Expense expense)
         {
-            await dbContext.Expenses.AddAsync(expense);
-            await dbContext.SaveChangesAsync();
+            await userDbContext.Expenses.AddAsync(expense);
+            await userDbContext.SaveChangesAsync();
 
             return true;
         }
 
         public async Task<List<ExpenseView>?> GetExpenseListAsync(string? UserName)
         {
-            var list = await (from expense in dbContext.Expenses.Where(d => d.Username == UserName)
-                              join uc in dbContext.UserChoices.Where(d => d.Username == UserName)
+            var list = await (from expense in userDbContext.Expenses.Where(d => d.Username == UserName)
+                              join uc in userDbContext.UserChoices.Where(d => d.Username == UserName)
                               on expense.CategoryId equals uc.Id
                               select new ExpenseView
                               {
@@ -41,7 +41,7 @@ namespace DatabaseLayer
 
         public async Task<bool> IsUsedCategory(int id)
         {
-            var res = await dbContext.Expenses.AnyAsync(d => d.CategoryId == id);
+            var res = await userDbContext.Expenses.AnyAsync(d => d.CategoryId == id);
 
             if (res)
             {
@@ -55,8 +55,8 @@ namespace DatabaseLayer
 
         public async Task<ExpenseView?> GetExpenseViewByIdAsync(int id)
         {
-            var expense = await dbContext.Expenses.Where(exp => exp.Id == id).FirstOrDefaultAsync();
-            var CatName = await dbContext.UserChoices.Where(cat => cat.Id == expense.CategoryId)
+            var expense = await userDbContext.Expenses.Where(exp => exp.Id == id).FirstOrDefaultAsync();
+            var CatName = await userDbContext.UserChoices.Where(cat => cat.Id == expense.CategoryId)
                 .FirstOrDefaultAsync();
 
             var expenseView = new ExpenseView
@@ -73,29 +73,29 @@ namespace DatabaseLayer
 
         public async Task<Expense?> GetExpenseById(int id)
         {
-            var exp = await dbContext.Expenses.Where(d => d.Id == id).FirstOrDefaultAsync();
+            var exp = await userDbContext.Expenses.Where(d => d.Id == id).FirstOrDefaultAsync();
 
             return exp;
         }
 
         public async Task<bool?> DeleteExpenseAsync(Expense expense)
         {
-            dbContext.Expenses.Remove(expense);
-            await dbContext.SaveChangesAsync(); 
+            userDbContext.Expenses.Remove(expense);
+            await userDbContext.SaveChangesAsync(); 
 
             return true;
         }
 
         public async Task<decimal?> GetAmountByIdAsync(int id)
         {
-            var amount = await dbContext.Expenses.Where(e => e.Id == id).Select(e => e.Amount).FirstOrDefaultAsync();
+            var amount = await userDbContext.Expenses.Where(e => e.Id == id).Select(e => e.Amount).FirstOrDefaultAsync();
 
             return amount;
         }
 
         public async Task<bool?> UpdateExpenseAsync(Expense expense)
         {
-            var OldExpense = await dbContext.Expenses.Where(e => e.Id == expense.Id).FirstOrDefaultAsync();
+            var OldExpense = await userDbContext.Expenses.Where(e => e.Id == expense.Id).FirstOrDefaultAsync();
             
             if (OldExpense != null)
             {
@@ -103,7 +103,7 @@ namespace DatabaseLayer
                 OldExpense.Date = expense.Date;
                 OldExpense.CategoryId= expense.CategoryId;
 
-                await dbContext.SaveChangesAsync(true);
+                await userDbContext.SaveChangesAsync(true);
             }
 
             return true;
@@ -111,8 +111,8 @@ namespace DatabaseLayer
 
         public async Task<List<ExpenseView>?> GetExpenseByDate(DateTimeOffset? FromDate, DateTimeOffset? ToDate, string? UserName)
         {
-            var list = await (from expense in dbContext.Expenses.Where(d => d.Username == UserName && d.Date >= FromDate && d.Date <= ToDate)
-                             join uc in dbContext.UserChoices.Where(d => d.Username == UserName)
+            var list = await (from expense in userDbContext.Expenses.Where(d => d.Username == UserName && d.Date >= FromDate && d.Date <= ToDate)
+                             join uc in userDbContext.UserChoices.Where(d => d.Username == UserName)
                              on expense.CategoryId equals uc.Id
                              select new ExpenseView
                              {

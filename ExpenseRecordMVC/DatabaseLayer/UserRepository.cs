@@ -9,11 +9,11 @@ namespace DatabaseLayer
 {
     public class UserRepository : IUserRepository
     {
-        private readonly ExpenseDbContext expenseDbContext;
+        private readonly UserDbContext userDbContext;
 
-        public UserRepository() 
+        public UserRepository(UserDbContext userDbContext) 
         {
-            expenseDbContext = new ExpenseDbContext();
+            this.userDbContext = userDbContext;
         }
 
         public async Task CreateUserAsync(UserManager<IdentityUser> userManager, IdentityUser identityUser, string? password)
@@ -23,13 +23,13 @@ namespace DatabaseLayer
 
         public async Task SaveUserDetailsAsync(UserDetails userDetails)
         {
-            await expenseDbContext.UserDetails.AddAsync(userDetails);
-            await expenseDbContext.SaveChangesAsync();
+            await userDbContext.UserDetails.AddAsync(userDetails);
+            await userDbContext.SaveChangesAsync();
         }
 
         public async Task<UserDetails> GetUserDetailsAsync(string? username)
         {
-            var result = await expenseDbContext.UserDetails.Where(u => u.Username == username).FirstOrDefaultAsync();
+            var result = await userDbContext.UserDetails.Where(u => u.Username == username).FirstOrDefaultAsync();
             
             if (result == null)
             {
@@ -44,19 +44,19 @@ namespace DatabaseLayer
 
         public async Task<bool> ChangeTotalAmountAsync(string? userName, decimal? Amount)
         {
-            var res = await expenseDbContext.UserDetails.Where(x => x.Username == userName).FirstOrDefaultAsync();
+            var res = await userDbContext.UserDetails.Where(x => x.Username == userName).FirstOrDefaultAsync();
             if (res != null)
             {
                 res.TotalCost += Amount;
             }
-            await expenseDbContext.SaveChangesAsync();
+            await userDbContext.SaveChangesAsync();
 
             return true;
         }
 
         public async Task<DateTimeOffset?> UserCreatedDateAsync(string? userName)
         {
-            var userCreatedDate = await expenseDbContext.UserDetails.Where(u => u.Username == userName)
+            var userCreatedDate = await userDbContext.UserDetails.Where(u => u.Username == userName)
                 .Select(d => d.Created).FirstOrDefaultAsync();
 
             return userCreatedDate;
@@ -65,7 +65,7 @@ namespace DatabaseLayer
         public async Task<List<UserListData>> GetAllUserAsync()
         {
             MemoryStream ms = new MemoryStream();
-            var allUsers = await expenseDbContext.UserDetails.Select(d => new UserListData
+            var allUsers = await userDbContext.UserDetails.Select(d => new UserListData
             {
                 Id = d.Id,
                 Name = d.Name,
@@ -78,7 +78,7 @@ namespace DatabaseLayer
 
         public async Task<UserDetailsCore?> GetUserDetailsByIdAsync(int id)
         {
-            var user = await expenseDbContext.UserDetails.Select(d => new UserDetailsCore
+            var user = await userDbContext.UserDetails.Select(d => new UserDetailsCore
             {
                 Id = d.Id,
                 Name = d.Name,

@@ -7,23 +7,23 @@ namespace DatabaseLayer
 {
     public class CategoryRepository : ICategoryRepository
     {
-        private readonly ExpenseDbContext expenseDbContext;
+        private readonly UserDbContext userDbContext;
 
-        public CategoryRepository()
+        public CategoryRepository(UserDbContext userDbContext)
         {
-            expenseDbContext = new ExpenseDbContext();
+            this.userDbContext = userDbContext;
         }
 
         public async Task<List<UserChoice>> GetUserChoiceAsync(string? uname)
         {
-            var list = await expenseDbContext.UserChoices.Where(d => d.Username == uname).ToListAsync();
+            var list = await userDbContext.UserChoices.Where(d => d.Username == uname).ToListAsync();
 
             return list;
         }
 
         public async Task<bool> CreateCategoryAsync(UserChoice userChoice)
         {
-            var res = await expenseDbContext.UserChoices.AnyAsync(d => d.Username== userChoice.Username && 
+            var res = await userDbContext.UserChoices.AnyAsync(d => d.Username== userChoice.Username && 
                 d.CategoryName == userChoice.Username);
 
             if (res)
@@ -31,40 +31,40 @@ namespace DatabaseLayer
                 return false;
             }
             
-            await expenseDbContext.UserChoices.AddAsync(userChoice);
-            await expenseDbContext.SaveChangesAsync();
+            await userDbContext.UserChoices.AddAsync(userChoice);
+            await userDbContext.SaveChangesAsync();
 
             return true;
         }
 
         public async Task<UserChoice?> UserChoiceByIdAsync(int id)
         {
-            var res = await expenseDbContext.UserChoices.Where(d => d.Id== id).FirstOrDefaultAsync();
+            var res = await userDbContext.UserChoices.Where(d => d.Id== id).FirstOrDefaultAsync();
 
             return res;
         }
 
         public async Task<bool?> SaveChoiceAsync(int id, string? newName)
         {
-            var data = await expenseDbContext.UserChoices.Where(d => d.Id == id).FirstOrDefaultAsync();
+            var data = await userDbContext.UserChoices.Where(d => d.Id == id).FirstOrDefaultAsync();
             
             if(data != null) 
             {
                 data.CategoryName = newName;
             }
             
-            await expenseDbContext.SaveChangesAsync();
+            await userDbContext.SaveChangesAsync();
             
             return true;
         }
 
         public async Task<bool?> DeleteChoiceAsync(int id)
         {
-            var item = await expenseDbContext.UserChoices.Where(d => d.Id == id).FirstOrDefaultAsync();
+            var item = await userDbContext.UserChoices.Where(d => d.Id == id).FirstOrDefaultAsync();
             if(item != null)
             {
-                expenseDbContext.UserChoices.Remove(item);
-                await expenseDbContext.SaveChangesAsync() ;
+                userDbContext.UserChoices.Remove(item);
+                await userDbContext.SaveChangesAsync() ;
 
                 return true;
             }
@@ -76,7 +76,7 @@ namespace DatabaseLayer
 
         public async Task<int> GerUserChoiceIdAsync(string? userName, string? CategoryName)
         {
-            var id = await expenseDbContext.UserChoices.Where(d => d.Username==userName && d.CategoryName == CategoryName)
+            var id = await userDbContext.UserChoices.Where(d => d.Username==userName && d.CategoryName == CategoryName)
                 .Select(d => d.Id).FirstOrDefaultAsync();
 
             return id;

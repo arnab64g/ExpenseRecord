@@ -1,6 +1,6 @@
 using DatabaseLayer;
 using DatabaseLayer.Interface;
-using ExpenseRecordMVC.Data;
+using DatabaseLayer.Data;
 using ExpenseService;
 using ExpenseService.Interface;
 using Microsoft.AspNetCore.Identity;
