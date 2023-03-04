@@ -4,6 +4,7 @@ using ExpenseService.Interface;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
+using ExtraLibraries;
 
 namespace ExpenseRecordMVC.Controllers
 {
@@ -11,16 +12,13 @@ namespace ExpenseRecordMVC.Controllers
     {
         private readonly UserManager<IdentityUser> userManager;
         private readonly SignInManager<IdentityUser> signInManager;
-        private readonly RoleManager<IdentityRole> roleManager;
         private readonly IUserService userService;
 
-        public UserController(UserManager<IdentityUser> userManager, IUserService userService, 
-            SignInManager<IdentityUser> signInManager, RoleManager<IdentityRole> roleManager)
+        public UserController(UserManager<IdentityUser> userManager, IUserService userService, SignInManager<IdentityUser> signInManager)
         {
             this.userManager = userManager;
             this.userService = userService;
             this.signInManager = signInManager;
-            this.roleManager = roleManager;
         }
 
         public IActionResult Login()
@@ -31,7 +29,7 @@ namespace ExpenseRecordMVC.Controllers
         [HttpPost]
         public async Task<IActionResult> Login(LoginModel loginModel)
         {
-            var res = await signInManager.PasswordSignInAsync(loginModel.UsernameOrPassword, loginModel.Password, true, true);
+            var res = await signInManager.PasswordSignInAsync(NotNull.MakeNotNull(loginModel.UsernameOrPassword), NotNull.MakeNotNull(loginModel.Password), true, true);
             
             if (res.Succeeded)
             {
@@ -68,7 +66,7 @@ namespace ExpenseRecordMVC.Controllers
                 Photo = ms.ToArray(),
             };
 
-            await userService.CreateNewUserAsync(userManager, userDetaild, signUpModel.Password);
+            await userService.CreateNewUserAsync(userManager, userDetaild, NotNull.MakeNotNull(signUpModel.Password));
 
             return View("Login");
         }
@@ -77,7 +75,12 @@ namespace ExpenseRecordMVC.Controllers
         {
             if (signInManager.IsSignedIn(User))
             {
-                var result = await userService.GetUserDetailsAsync(User.Identity.Name);
+                if (User.Identity == null)
+                {
+                    return BadRequest(ModelState);
+                }
+
+                var result = await userService.GetUserDetailsAsync(NotNull.MakeNotNull(User.Identity.Name));
 
                 return View(result);
             }
